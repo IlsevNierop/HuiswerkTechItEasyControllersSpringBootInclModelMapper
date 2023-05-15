@@ -6,34 +6,37 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Getter
+@Setter
 public class TelevisionInputDto {
 
 
-    public String type;
+    private String type;
     @NotBlank(message = "Brand can't be blank")
-    public String brand;
+    private String brand;
     @Size(max=20,message = "Name cannot have more characters than 20.")
-    public String name;
+    private String name;
 
     @PositiveOrZero(message="Price needs to be zero or higher, can't be negative")
-    public double price;
+    private double price;
     @PositiveOrZero(message="Size needs to be zero or higher, can't be negative")
-    public double availableSize;
-    public double refreshRate;
-    public String screenType;
-    public String screenQuality;
-    public Boolean smartTv;
-    public Boolean voiceControl;
-    public Boolean hdr;
-    public Boolean bluetooth;
-    public Boolean ambiLight;
+    private double availableSize;
+    private double refreshRate;
+    private String screenType;
+    private String screenQuality;
+    private Boolean smartTv;
+    private Boolean voiceControl;
+    private Boolean hdr;
+    private Boolean bluetooth;
+    private Boolean ambiLight;
 
     @PositiveOrZero(message="Stock needs to be zero or higher, can't be negative")
-    public int originalStock;
+    private int originalStock;
     @PositiveOrZero(message="Sold needs to be zero or higher, can't be negative")
-    public int sold;
+    private int sold;
 
 
 

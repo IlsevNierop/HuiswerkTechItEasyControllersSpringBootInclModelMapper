@@ -1,26 +1,30 @@
 package com.example.huiswerktechiteasycontrollerspringboot.dtos;
 
 import com.example.huiswerktechiteasycontrollerspringboot.models.Television;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.BeanUtils;
 
+@Getter
+@Setter
 public class TelevisionOutputDto {
 
-    public Long id;
-    public String type;
-    public String brand;
-    public String name;
-    public double price;
-    public double availableSize;
-    public double refreshRate;
-    public String screenType;
-    public String screenQuality;
-    public Boolean smartTv;
-    public Boolean voiceControl;
-    public Boolean hdr;
-    public Boolean bluetooth;
-    public Boolean ambiLight;
-    public int originalStock;
-    public int sold;
+    private Long id;
+    private String type;
+    private String brand;
+    private String name;
+    private double price;
+    private double availableSize;
+    private double refreshRate;
+    private String screenType;
+    private String screenQuality;
+    private Boolean smartTv;
+    private Boolean voiceControl;
+    private Boolean hdr;
+    private Boolean bluetooth;
+    private Boolean ambiLight;
+    private int originalStock;
+    private int sold;
 
     public void copyProperties(Television target){
         BeanUtils.copyProperties(this, target);
